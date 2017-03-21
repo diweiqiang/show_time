@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            text-align: center;
+            margin-top: 80px;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+<div id="time">20:20:20</div>
+
+<script src="jquery-3.1.0.js"></script>
+<script>
+    var $time=$('#time');
+
+    function showTime() {
+        var now=new Date();
+        $time.html(now.toTimeString().slice(0,8));
+        //$time.html(now.toTimeString());
+    }
+
+    showTime();
+    setInterval(showTime,1000);
+</script>
+</body>
+</html>
